@@ -1,9 +1,9 @@
 package com.okcat.extend.request;
 
-import com.okcat.core.okhttp.builder.request.BaseOkHttpRequestBuilder;
-import com.okcat.core.okhttp.builder.request.GetRequestBuilder;
-import com.okcat.core.okhttp.builder.request.PostRequestBuilder;
-import com.okcat.core.okhttp.factory.BaseRequestFactory;
+import com.okcat.core.okhttp.request.builder.BaseOkHttpRequestBuilder;
+import com.okcat.core.okhttp.request.builder.GetRequestBuilder;
+import com.okcat.core.okhttp.request.builder.PostRequestBuilder;
+import com.okcat.core.okhttp.request.BaseRequestFactory;
 import okhttp3.MediaType;
 
 /**

@@ -1,12 +1,12 @@
 package com.okcat;
 
 import com.okcat.core.OkCatPlugin;
-import com.okcat.core.okhttp.builder.config.OkHttpConfigBuilder;
-import com.okcat.core.okhttp.builder.request.BaseOkHttpRequestBuilder;
-import com.okcat.core.okhttp.builder.request.GetRequestBuilder;
-import com.okcat.core.okhttp.builder.request.PostRequestBuilder;
-import com.okcat.core.okhttp.factory.SimpleOkHttpFactory;
-import com.okcat.core.okhttp.interceptor.OkHttpLogger;
+import com.okcat.core.okhttp.client.OkHttpClientConfigBuilder;
+import com.okcat.core.okhttp.request.builder.BaseOkHttpRequestBuilder;
+import com.okcat.core.okhttp.request.builder.GetRequestBuilder;
+import com.okcat.core.okhttp.request.builder.PostRequestBuilder;
+import com.okcat.core.okhttp.client.factory.SimpleOkHttpFactory;
+import com.okcat.core.okhttp.client.interceptor.OkHttpLogger;
 import com.okcat.core.okhttp.response.adapter.BaseResultAdapter;
 import com.okcat.extend.request.RequestConfig;
 import com.okcat.extend.request.RequestFactory;
@@ -32,7 +32,7 @@ public class OkCat {
     private OkCatPlugin plugin;
 
     private OkCat() {
-        OkHttpConfigBuilder builder = new OkHttpConfigBuilder();
+        OkHttpClientConfigBuilder builder = new OkHttpClientConfigBuilder();
         builder.setLogger(new OkHttpLogger());
         plugin = new OkCatPlugin(new SimpleOkHttpFactory(builder));
     }

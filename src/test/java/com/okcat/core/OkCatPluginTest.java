@@ -2,9 +2,7 @@ package com.okcat.core;
 
 import com.okcat.OkCat;
 import com.okcat.core.log.Log;
-import com.okcat.core.okhttp.builder.request.GetRequestBuilder;
 import com.okcat.extend.request.RequestConfig;
-import com.okcat.extend.request.RequestFactory;
 import com.pq.user.protobuf.ProtoStudent;
 import io.reactivex.Observable;
 import io.reactivex.functions.Consumer;
