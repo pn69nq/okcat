@@ -1,4 +1,4 @@
-package com.okcat.core.okhttp.factory;
+package com.okcat.core.okhttp.client.factory;
 
 import okhttp3.OkHttpClient;
 

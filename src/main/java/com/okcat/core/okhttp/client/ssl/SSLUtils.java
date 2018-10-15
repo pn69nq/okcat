@@ -1,4 +1,4 @@
-package com.okcat.core.okhttp.ssl;
+package com.okcat.core.okhttp.client.ssl;
 
 import com.okcat.core.log.Log;
 

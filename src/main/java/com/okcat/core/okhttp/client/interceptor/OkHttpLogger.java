@@ -1,4 +1,4 @@
-package com.okcat.core.okhttp.interceptor;
+package com.okcat.core.okhttp.client.interceptor;
 
 import com.okcat.core.log.Log;
 import okhttp3.logging.HttpLoggingInterceptor;

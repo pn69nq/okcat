@@ -1,6 +1,6 @@
-package com.okcat.core.okhttp.factory;
+package com.okcat.core.okhttp.request;
 
-import com.okcat.core.okhttp.builder.request.BaseOkHttpRequestBuilder;
+import com.okcat.core.okhttp.request.builder.BaseOkHttpRequestBuilder;
 
 /**
  * @author :  test

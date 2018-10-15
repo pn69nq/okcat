@@ -1,4 +1,4 @@
-package com.okcat.core.okhttp.builder.request;
+package com.okcat.core.okhttp.request.builder;
 
 import okhttp3.Request;
 import okhttp3.RequestBody;
@@ -13,7 +13,7 @@ import okhttp3.RequestBody;
  * --------  ---------  --------------------------
  */
 
-public class PostRequestBuilder extends BaseOkHttpRequestBuilder{
+public class PostRequestBuilder extends BaseOkHttpRequestBuilder {
 
     public static final int TYPE_STRING = 1;
     public static final int TYPE_BYTES = 2;

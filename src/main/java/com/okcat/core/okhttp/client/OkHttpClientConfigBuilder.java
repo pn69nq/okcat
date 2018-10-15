@@ -1,15 +1,15 @@
-package com.okcat.core.okhttp.builder.config;
+package com.okcat.core.okhttp.client;
 
-import com.okcat.core.okhttp.interceptor.OkHttpLogger;
-import com.okcat.core.okhttp.ssl.SSLParams;
-import com.okcat.core.okhttp.ssl.SSLUtils;
+import com.okcat.core.okhttp.client.interceptor.OkHttpLogger;
+import com.okcat.core.okhttp.client.ssl.SSLParams;
+import com.okcat.core.okhttp.client.ssl.SSLUtils;
 import okhttp3.OkHttpClient;
 import okhttp3.logging.HttpLoggingInterceptor;
 
 import java.io.InputStream;
 import java.util.concurrent.TimeUnit;
 
-public class OkHttpConfigBuilder {
+public class OkHttpClientConfigBuilder {
 
     protected String url;
 
@@ -22,12 +22,12 @@ public class OkHttpConfigBuilder {
     protected HttpLoggingInterceptor.Logger logger;
 
 
-    public OkHttpConfigBuilder setUrl(String url){
+    public OkHttpClientConfigBuilder setUrl(String url){
         this.url = url;
         return this;
     }
 
-    public OkHttpConfigBuilder setLogger(HttpLoggingInterceptor.Logger logger) {
+    public OkHttpClientConfigBuilder setLogger(HttpLoggingInterceptor.Logger logger) {
         this.logger = logger;
         return this;
     }
@@ -37,7 +37,7 @@ public class OkHttpConfigBuilder {
      *
      * @return
      */
-    public OkHttpConfigBuilder sslSocketFactory() {
+    public OkHttpClientConfigBuilder sslSocketFactory() {
         sslParams = SSLUtils.getSslSocketFactory();
         return this;
     }
@@ -48,7 +48,7 @@ public class OkHttpConfigBuilder {
      * @param certificates
      * @return
      */
-    public OkHttpConfigBuilder sslSocketFactory(InputStream... certificates) {
+    public OkHttpClientConfigBuilder sslSocketFactory(InputStream... certificates) {
         sslParams = SSLUtils.getSslSocketFactory(certificates);
         return this;
     }
@@ -61,7 +61,7 @@ public class OkHttpConfigBuilder {
      * @param certificates
      * @return
      */
-    public OkHttpConfigBuilder sslSocketFactory(InputStream bksFile, String password, InputStream... certificates) {
+    public OkHttpClientConfigBuilder sslSocketFactory(InputStream bksFile, String password, InputStream... certificates) {
         sslParams = SSLUtils.getSslSocketFactory(bksFile, password, certificates);
         return this;
     }

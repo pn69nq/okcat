@@ -1,4 +1,4 @@
-package com.okcat.core.okhttp.builder.request;
+package com.okcat.core.okhttp.request.builder;
 
 import okhttp3.*;
 

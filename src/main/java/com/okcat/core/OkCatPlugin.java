@@ -1,8 +1,8 @@
 package com.okcat.core;
 
 import com.okcat.core.log.Log;
-import com.okcat.core.okhttp.builder.request.BaseRequestBuilder;
-import com.okcat.core.okhttp.factory.BaseOkHttpFactory;
+import com.okcat.core.okhttp.request.builder.BaseRequestBuilder;
+import com.okcat.core.okhttp.client.factory.BaseOkHttpFactory;
 import com.okcat.core.okhttp.response.adapter.BaseResultAdapter;
 import io.reactivex.Observable;
 import io.reactivex.ObservableEmitter;

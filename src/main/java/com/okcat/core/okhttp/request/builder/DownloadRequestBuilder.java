@@ -1,10 +1,8 @@
-package com.okcat.core.okhttp.builder.request;
+package com.okcat.core.okhttp.request.builder;
 
-import okhttp3.FormBody;
+import com.okcat.core.okhttp.request.builder.BaseOkHttpRequestBuilder;
 import okhttp3.Request;
 import okhttp3.RequestBody;
-
-import java.util.Map;
 
 /**
  * @author :  test
@@ -16,7 +14,7 @@ import java.util.Map;
  * --------  ---------  --------------------------
  */
 
-public class DownloadRequestBuilder extends BaseOkHttpRequestBuilder{
+public class DownloadRequestBuilder extends BaseOkHttpRequestBuilder {
 
     public DownloadRequestBuilder(String url){
         super(url);

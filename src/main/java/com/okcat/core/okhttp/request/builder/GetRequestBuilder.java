@@ -1,11 +1,11 @@
-package com.okcat.core.okhttp.builder.request;
+package com.okcat.core.okhttp.request.builder;
 
 import com.okcat.core.log.Log;
+import com.okcat.core.okhttp.request.builder.BaseOkHttpRequestBuilder;
 import com.okcat.core.util.StringUtil;
 import okhttp3.Headers;
 import okhttp3.Request;
 
-import java.util.HashMap;
 import java.util.Map;
 
 /**

@@ -1,4 +1,4 @@
-package com.okcat.core.okhttp.ssl;
+package com.okcat.core.okhttp.client.ssl;
 
 import javax.net.ssl.SSLSocketFactory;
 import javax.net.ssl.X509TrustManager;
