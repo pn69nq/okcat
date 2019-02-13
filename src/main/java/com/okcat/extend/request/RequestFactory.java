@@ -6,6 +6,8 @@ import com.okcat.core.okhttp.request.builder.PostRequestBuilder;
 import com.okcat.core.okhttp.request.BaseRequestFactory;
 import okhttp3.MediaType;
 
+import java.util.Map;
+
 /**
  * @author :  test
  * @Project Name :  okcat
@@ -20,11 +22,19 @@ public class RequestFactory implements BaseRequestFactory {
     private int requestType = RequestConfig.REQUEST_METHOD_GET;
     private int protocol = RequestConfig.PROTOCOL_TYPE_DEFAULT;
     private String url;
+    private Map<String,String> header;
 
     public RequestFactory(int requestType, int protocol, String url){
         this.requestType = requestType;
         this.url = url;
         this.protocol = protocol;
+    }
+
+    public RequestFactory(int requestType, int protocol, String url,Map<String,String> header){
+        this.requestType = requestType;
+        this.url = url;
+        this.protocol = protocol;
+        this.header = header;
     }
 
     @Override

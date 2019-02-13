@@ -28,7 +28,7 @@ import java.util.Map;
  */
 public class OkCat {
 
-    private static OkCat miu;
+    private static volatile OkCat miu;
     private OkCatPlugin plugin;
 
     private OkCat() {
@@ -37,6 +37,8 @@ public class OkCat {
         plugin = new OkCatPlugin(new SimpleOkHttpFactory(builder));
     }
 
+
+    //懒汉单例
     public static OkCat getMiu() {
         if (miu == null) {
             synchronized (OkCat.class) {
@@ -81,6 +83,41 @@ public class OkCat {
         BaseResultAdapter adapter = new ProtoResultAdapter();
         return plugin.rxRequest(builder,adapter,tClass);
     }
+
+   /**
+     * 使用pb 传递参数请求,接收pb response
+     * rxjava2 pb请求
+     * @param url
+     * @param args
+     * @param tClass 需要返回的对象的class对象
+     * @param <T>
+     */
+    public <T> Observable postRequestRxPb(String url, byte[] args,Map<String,String> header, Class<T> tClass) {
+        RequestFactory factory = new RequestFactory(RequestConfig.REQUEST_METHOD_POST,RequestConfig.PROTOCOL_TYPE_PROTO,url,header);
+        PostRequestBuilder builder = (PostRequestBuilder) factory.getRequestBuilder();
+        builder.setBytes(args);
+        BaseResultAdapter adapter = new ProtoResultAdapter();
+        return plugin.rxRequest(builder,adapter,tClass);
+    }
+
+    /**
+     * 使用pb 传递参数请求,接收pb response
+     * rxjava2 pb请求
+     * @param url
+     * @param args
+     * @param tClass 需要返回的对象的class对象
+     * @param <T>
+     */
+    public <T> Observable postRequestRxPbHaveBodyWithHeader(String url, byte[] args,Map<String,String> header, Class<T> tClass) {
+        RequestFactory factory = new RequestFactory(RequestConfig.REQUEST_METHOD_POST,RequestConfig.PROTOCOL_TYPE_PROTO,url,header);
+        PostRequestBuilder builder = (PostRequestBuilder) factory.getRequestBuilder();
+        builder.setBytes(args);
+        BaseResultAdapter adapter = new ProtoResultAdapter();
+        return plugin.rxRequestHaveBodyWithHeader(builder,adapter,tClass);
+    }
+
+
+
 
 
 

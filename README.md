@@ -19,7 +19,22 @@
     管理类
     com.okcat
     
+    
+    Okcat 提供代理功能--->OkcatPlugin(管理okhttp)--->Okhttp
    
+```
+
+
+### 项目支持看pb,json
+```
+    
+
+
+
+
+
+
+
 ```
 
 
